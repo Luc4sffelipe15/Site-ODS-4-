@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz e Fórum</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        .pergunta-card {
+            display: none;
+        }
+        .pergunta-card.ativa {
+            display: block;
+        }
+    </style>
+</head>
+<body class="pagina-cadastro">
+
+    <header class="header-aluno">
+        <div class="header-esquerda" style="display: flex; align-items: center; gap: 15px;">
+            <img src="icone.aluno.png" alt="Logo" class="logo-site">
+            <nav class="header-links">
+                <a href="AreaDoAluno.html">Área do Aluno</a>
+                <a href="Materia.html">Voltar à Matéria</a>
+            </nav>
+        </div>
+        <button type="button" class="btn-logout" onclick="window.location.href='Login.html'">Sair</button>
+    </header>
+
+    <div class="conteudo-principal">
+        <h2 class="subtitulo">Quiz da Matéria</h2>
+        <div class="aluno-container">
+            <div class="card-aluno">
+                
+                <!-- Pergunta 1 -->
+                <div class="pergunta-card ativa" id="p1">
+                    <h2>Pergunta 1</h2>
+                    <p>Quanto é 10 + 5?</p>
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                        <button type="button" class="btn-acessar" onclick="proximaPergunta(true)">15</button>
+                        <button type="button" class="btn-acessar" onclick="proximaPergunta(false)">10</button>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="pergunta-card" id="p2">
+                    <h2>Pergunta 2</h2>
+                    <p>Quanto é 2 + 2?</p>
+                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
+                        <button type="button" class="btn-acessar" onclick="proximaPergunta(true)">4</button>
+                        <button type="button" class="btn-acessar" onclick="proximaPergunta(false)">5</button>
+                    </div>
+                </div>
+
+                <!-- Tela de Conclusão -->
+                <div class="pergunta-card" id="fim">
+                    <h2>Parabéns! 🎉</h2>
+                    <p>Você concluiu todas as perguntas do quiz.</p>
+                    <div style="margin-top: 15px;">
+                        <a href="Materia.html" class="btn-acessar" style="display: block; text-align: center; text-decoration: none; line-height: normal;">Voltar à Matéria</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>2026 - Todos os direitos reservados</footer>
+
+    <script>
+        let perguntaAtual = 1;
+        const totalPerguntas = 2;
+
+        function proximaPergunta(correta) {
+            if (correta) {
+                alert("Resposta Correta!");
+            } else {
+                alert("Resposta Incorreta, mas vamos continuar!");
+            }
+
+            document.getElementById(`p${perguntaAtual}`).classList.remove('ativa');
+            perguntaAtual++;
+
+            if (perguntaAtual <= totalPerguntas) {
+                document.getElementById(`p${perguntaAtual}`).classList.add('ativa');
+            } else {
+                document.getElementById('fim').classList.add('ativa');
+            }
+        }
+    </script>
+</body>
+</html>

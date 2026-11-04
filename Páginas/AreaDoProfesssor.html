@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area do Professor</title>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="professor">
+  <header class="header-aluno">
+        <div class="header-esquerda" style="display: flex; align-items: center; gap: 15px;">
+            <img src="logo.png" alt="Logo" class="logo-site">
+            <nav class="header-links">
+                <a href="AreaDoAluno.html">Área do Aluno</a>
+                <a href="AreaDoProfesssor.html" class="ativo">Área do Professor</a>
+            </nav>
+        </div>
+    <button type="button" class="btn-logout" onclick="window.location.href='Cadastro.html'">Ir para Cadastro</button>
+    </header>
+    <h2 class="subtitulo">Bem-vindo à área do professor! Aqui você pode gerenciar suas turmas e alunos.</h2>
+
+    <!-- Grade que organiza tudo em 4 blocos separados -->
+    <div class="dashboard-grid">
+
+        <!-- Bloco 1: Criar Turma -->
+        <div class="card">
+            <h2>Criar Turma</h2>
+            <form>
+                <label for="nomeTurma">Nome da Turma:</label>
+                <input type="text" id="nomeTurma" name="nomeTurma"><br><br>
+
+                <label for="codigoTurma">Código da Turma:</label>
+                <input type="text" id="codigoTurma" name="codigoTurma"><br><br>
+
+                <input type="submit" value="Criar Turma">
+            </form>
+        </div>
+
+        <!-- Bloco 2: Gerenciar Turmas -->
+        <div class="card">
+            <h2>Gerenciar Turmas</h2>
+            <ul>
+                <li>Turma 1 - <div><button>Editar</button> <button>Excluir</button></div></li>
+                <li>Turma 2 - <div><button>Editar</button> <button>Excluir</button></div></li>
+                <li>Turma 3 - <div><button>Editar</button> <button>Excluir</button></div></li>
+            </ul>
+        </div>
+
+        <!-- Bloco 3: Estatísticas -->
+        <div class="card">
+            <h2>Estatísticas das Turmas</h2>
+            <div class="estatisticas-container">
+                <div class="estatistica-card">
+                    <img src="icone.aluno.png" alt="Ícone de Alunos" class="estatistica-icon">
+                    <div class="estatistica-info">
+                        <span class="estatistica-label">Total de alunos:</span>
+                        <span class="estatistica-numero">30</span>
+                    </div>
+                </div>
+
+                <div class="estatistica-card">
+                    <img src="icone.turma.png" alt="Ícone de Turmas" class="estatistica-icon">
+                    <div class="estatistica-info">
+                        <span class="estatistica-label">Turmas ativas:</span>
+                        <span class="estatistica-numero">3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloco 4: Relatórios -->
+        <div class="card">
+            <h3>Relatórios</h3>
+            <ul>    
+                <li><a href="RelatorioTurma1.html">Relatório da Turma 1</a></li>
+                <li><a href="RelatorioTurma2.html">Relatório da Turma 2</a></li>
+                <li><a href="RelatorioTurma3.html">Relatório da Turma 3</a></li>    
+            </ul>
+        </div>
+
+    </div>
+
+    
+</body class="professor"> 
+
+</html>

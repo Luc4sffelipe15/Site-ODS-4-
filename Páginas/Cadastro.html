@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="pagina-cadastro">
+
+    <!-- Cabeçalho Padrão -->
+    <header class="header-aluno">
+        <div class="header-esquerda" style="display: flex; align-items: center; gap: 15px;">
+            <img src="icone.aluno.png" alt="Logo" class="logo-site">
+            <nav class="header-links">
+                <a href="AreaDoAluno.html">Área do Aluno</a>
+                <a href="AreaDoProfesssor.html">Área do Professor</a>
+            </nav>
+        </div>
+        <button type="button" class="btn-logout" onclick="window.location.href='Login.html'">Voltar ao Login</button>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="conteudo-principal">
+        <h2 class="subtitulo">Bem-vindo ao Sistema de Cadastro</h2>
+
+        <div class="aluno-container">
+            <div class="card-aluno">
+                <h2>Cadastro</h2>
+                <p>Preencha o formulário abaixo para se cadastrar:</p>
+                
+                <div>
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 8px;">Aluno ou Professor?</label>
+                        <div style="display: flex; gap: 20px; align-items: center;">
+                            <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-weight: normal;">
+                                <input type="radio" id="aluno" name="tipo" value="aluno" checked style="margin: 0; width: auto;"> Aluno
+                            </label>   
+                            <label style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-weight: normal;">
+                                <input type="radio" id="professor" name="tipo" value="professor" style="margin: 0; width: auto;"> Professor
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email">
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="senha">Senha:</label><br>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                    </div>
+
+                    <button type="button" class="btn-acessar">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>2026 - Todos os direitos reservados</footer>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const botaoCadastrar = document.querySelector('.btn-acessar');
+
+        if (botaoCadastrar) {
+            botaoCadastrar.addEventListener('click', function() {
+                const radioProfessor = document.getElementById('professor');
+                const radioAluno = document.getElementById('aluno');
+
+                if (radioProfessor && radioProfessor.checked) {
+                    window.location.href = 'AreaDoProfesssor.html';
+                } else if (radioAluno && radioAluno.checked) {
+                    window.location.href = 'AreaDoAluno.html';
+                } else {
+                    alert('Por favor, selecione se você é Aluno ou Professor!');
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

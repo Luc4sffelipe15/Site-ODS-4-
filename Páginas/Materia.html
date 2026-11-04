@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matéria</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="pagina-cadastro">
+
+    <!-- Cabeçalho Padrão -->
+    <header class="header-aluno">
+        <div class="header-esquerda" style="display: flex; align-items: center; gap: 15px;">
+            <img src="icone.aluno.png" alt="Logo" class="logo-site">
+           <nav class="header-links">
+                <a href="AreaDoAluno.html">Área do Aluno</a>
+                <a href="AreaDoProfessor.html">Área do Professor</a>
+            </nav>
+        </div>
+        <button type="button" class="btn-logout" onclick="window.location.href='Login.html'">Voltar ao Login</button>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <div class="conteudo-principal" style="padding: 20px 10px;">
+        <h2 class="subtitulo" style="margin-bottom: 15px; font-size: 20px;">Matéria</h2>
+
+        <!-- Container super compacto -->
+        <div class="aluno-container" style="max-width: 720px !important; width: 100%;">
+            <div class="card-aluno" style="max-width: 720px !important; width: 100%; text-align: left; padding: 20px;">
+                
+                <!-- Imagem Ilustrativa no Topo -->
+                <div style="text-align: center; margin-bottom: 15px;">
+                    <img src="materia.png" alt="Ilustração da Matéria" style="max-width: 55%; height: auto; border-radius: 6px;">
+                </div>
+
+                <!-- Grid principal das 4 caixas (2 colunas) -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                    
+                    <div style="background-color: #faf5ed; padding: 10px 12px; border-radius: 6px; border: 1px solid #eedecc;">
+                        <h3 style="margin-bottom: 4px; color: #333; font-size: 13px;">📌 Detalhes da Matéria</h3>
+                        <p style="margin: 2px 0; font-size: 12px;"><strong>Nome:</strong> Matemática</p>
+                        <p style="margin: 2px 0; font-size: 12px;"><strong>Código:</strong> MAT101</p>
+                    </div>
+
+                    <div style="background-color: #faf5ed; padding: 10px 12px; border-radius: 6px; border: 1px solid #eedecc;">
+                        <h3 style="margin-bottom: 4px; color: #333; font-size: 13px;">📚 Conteúdo da Matéria</h3>
+                        <p style="margin: 0; font-size: 12px; line-height: 1.2;">Tópicos abordados, objetivos e exercícios práticos.</p>
+                    </div>
+
+                    <!-- Caixa de Recursos com os 4 botões em grade 2x2 -->
+                    <div style="background-color: #faf5ed; padding: 10px 12px; border-radius: 6px; border: 1px solid #eedecc;">
+                        <h3 style="margin-bottom: 4px; color: #333; font-size: 13px;">📁 Recursos e Material</h3>
+                        <p style="margin: 0 0 6px 0; font-size: 12px;">Vídeos, artigos e slides:</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                            <a href="#" class="btn-acessar" style="text-decoration: none; padding: 3px 4px; font-size: 10px; text-align: center; display: block;">Vídeos</a>
+                            <a href="#" class="btn-acessar" style="text-decoration: none; padding: 3px 4px; font-size: 10px; text-align: center; display: block;">Artigos</a>
+                            <a href="#" class="btn-acessar" style="text-decoration: none; padding: 3px 4px; font-size: 10px; text-align: center; display: block;">Slides</a>
+                            <a href="#" class="btn-acessar" style="text-decoration: none; padding: 3px 4px; font-size: 10px; text-align: center; display: block;">Exercícios</a>
+                        </div>
+                    </div>
+
+                    <!-- Caixa de Atividades e Fórum com o Botão para o Quiz -->
+                    <div style="background-color: #faf5ed; padding: 10px 12px; border-radius: 6px; border: 1px solid #eedecc;">
+                        <a href="Quiz.html" class="btn-acessar" style="display: block; width: 80%; margin: 0 auto; text-align: center; text-decoration: none; line-height: normal;">Quiz</a>
+                        <p style="margin: 0 0 8px 0; font-size: 12px; line-height: 1.2;">Quizzes sobre a matéria e espaço de discussão.</p>
+                        
+                    </div>
+
+                </div>
+
+                <!-- Segunda linha: Contato e Modo IA lado a lado -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    
+                    <div style="background-color: #faf5ed; padding: 10px 12px; border-radius: 6px; border: 1px solid #eedecc;">
+                        <h3 style="margin-bottom: 4px; color: #333; font-size: 13px;">👨‍🏫 Contato com o Professor</h3>
+                        <p style="margin: 0 0 6px 0; font-size: 12px;">Canal direto de tira-dúvidas.</p>
+                        <a href="#" class="btn-acessar" style="text-decoration: none; padding: 2px 6px; font-size: 10px; display: inline-block;">Falar com Professor</a>
+                    </div>
+
+                    <div style="background-color: #faf4ed; padding: 8px 10px; border-radius: 6px; border: 1px solid #e6d5c3; display: flex; align-items: center; gap: 10px;">
+                        <img src="robo.png" alt="Robô IA" style="width: 38px; height: 38px; object-fit: contain; flex-shrink: 0;">
+                        <div>
+                            <h3 style="margin-bottom: 2px; color: #333; font-size: 12px;">🤖 Modo IA</h3>
+                            <p style="margin: 0; font-size: 11px; line-height: 1.1;">Assistente virtual para auxiliar no aprendizado.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>2026 - Todos os direitos reservados</footer>
+
+</body>
+</html>
